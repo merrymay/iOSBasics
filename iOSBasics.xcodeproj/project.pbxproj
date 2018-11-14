@@ -49,6 +49,7 @@
 		CB44B283219BA07000A59600 /* iOSBasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBasicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB44B287219BA07000A59600 /* iOSBasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBasicsUITests.swift; sourceTree = "<group>"; };
 		CB44B289219BA07000A59600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB44B296219BA31500A59600 /* GitUsages.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitUsages.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		CB44B264219BA06F00A59600 /* iOSBasics */ = {
 			isa = PBXGroup;
 			children = (
+				CB44B295219BA2EC00A59600 /* HowTo */,
 				CB44B265219BA06F00A59600 /* AppDelegate.swift */,
 				CB44B267219BA06F00A59600 /* MasterViewController.swift */,
 				CB44B269219BA06F00A59600 /* DetailViewController.swift */,
@@ -126,6 +128,14 @@
 				CB44B289219BA07000A59600 /* Info.plist */,
 			);
 			path = iOSBasicsUITests;
+			sourceTree = "<group>";
+		};
+		CB44B295219BA2EC00A59600 /* HowTo */ = {
+			isa = PBXGroup;
+			children = (
+				CB44B296219BA31500A59600 /* GitUsages.md */,
+			);
+			path = HowTo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
