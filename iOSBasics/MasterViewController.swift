@@ -8,11 +8,28 @@
 
 import UIKit
 
+enum SampleDataTypes {
+    case autolayout, network, webview, restAPI, etc
+}
+struct SampleData {
+    var sampleDataType : SampleDataTypes
+    var title : String
+}
+
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
-
+    //var objects = [Any]()
+    var objects : [Any] = [
+        SampleData(sampleDataType: .autolayout, title: "Autolayout"),
+        SampleData(sampleDataType: .network, title: "Network"),
+        SampleData(sampleDataType: .webview, title: "WebView"),
+        
+        SampleData(sampleDataType: .restAPI, title: "RestAPI"),
+        SampleData(sampleDataType: .webview, title: "apns"),
+        SampleData(sampleDataType: .webview, title: "firebase FCM"),
+        SampleData(sampleDataType: .webview, title: "Async image load"), 
+        SampleData(sampleDataType: .restAPI, title: "etc")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +61,14 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                //let object = objects[indexPath.row] as! NSDate
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                //controller.detailItem = object
+                if let date = objects[indexPath.row] as? NSDate {
+                    controller.detailItem = date
+                } else if let sampleData = objects[indexPath.row] as? SampleData {
+                    controller.detailItem = sampleData
+                }
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -66,8 +88,13 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        if let date = objects[indexPath.row] as? NSDate {
+            cell.textLabel!.text = date.description
+        } else if let sampleData = objects[indexPath.row] as? SampleData {
+            cell.textLabel!.text = sampleData.title
+        }
+//        let object = objects[indexPath.row] as! NSDate
+//        cell.textLabel!.text = object.description
         return cell
     }
 
@@ -83,6 +110,10 @@ class MasterViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 

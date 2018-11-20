@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CocoaLumberjack
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -15,6 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // *** Initialize logger using CocoaLumberjack ***
+        // set a different log level for each logger
+        //        DDLog.add(DDOSLogger.sharedInstance, with: DDLogLevel.info)
+        //        DDLog.add(DDFileLogger.sharedInstance, with: DDLogLevel.debug)
+        
+        
+        // CocoaLumberjack - add system logger
+        DDLog.add(DDOSLogger.sharedInstance)
+        
+        // CocoaLumberjack - add file logger
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
+        
+        
+        
         // Override point for customization after application launch.
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController

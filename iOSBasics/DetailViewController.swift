@@ -6,6 +6,8 @@
 //  Copyright © 2018 MayPark. All rights reserved.
 //
 
+// Ref - https://developer.apple.com/documentation/webkit/wkwebview
+
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -17,7 +19,13 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                if let sampleData = detail as? SampleData {
+                    label.text = sampleData.title
+                    loadNextViewController(sampleData: sampleData)
+                } else if let date = detail as? NSDate {
+                    label.text = date.description
+                }
+                
             }
         }
     }
@@ -28,7 +36,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
+    var detailItem: Any? {
         didSet {
             // Update the view.
             configureView()
@@ -36,5 +44,24 @@ class DetailViewController: UIViewController {
     }
 
 
+    func loadNextViewController(sampleData:SampleData){
+        switch sampleData.sampleDataType {
+        case .autolayout :
+                if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "AutoLayout") as? AutoLayoutViewController {
+                    self.navigationController?.pushViewController(vc, animated: false)
+            }
+        case .network :
+            if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "Network") as? NetworkViewController {
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        case .webview :
+                print("go WebViewViewController")
+                if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewViewController {
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }
+            default:
+                print("")
+        }
+    }
 }
 
