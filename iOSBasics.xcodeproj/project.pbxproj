@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37A9688371F64F35A565042E /* Pods_iOSBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600BBFBDC9F4D516C453F446 /* Pods_iOSBasics.framework */; };
+		CB294FA321AA5EF000F715EB /* PasswordAutoFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB294FA221AA5EF000F715EB /* PasswordAutoFillViewController.swift */; };
 		CB44B266219BA06F00A59600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B265219BA06F00A59600 /* AppDelegate.swift */; };
 		CB44B268219BA06F00A59600 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B267219BA06F00A59600 /* MasterViewController.swift */; };
 		CB44B26A219BA06F00A59600 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B269219BA06F00A59600 /* DetailViewController.swift */; };
@@ -42,6 +43,12 @@
 /* Begin PBXFileReference section */
 		3D31729876210C7D313DCCA3 /* Pods-iOSBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasics.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBasics/Pods-iOSBasics.release.xcconfig"; sourceTree = "<group>"; };
 		600BBFBDC9F4D516C453F446 /* Pods_iOSBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB294F6621A4D2D800F715EB /* Distribution.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Distribution.md; sourceTree = "<group>"; };
+		CB294F6721A4DF5300F715EB /* Signing.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Signing.md; sourceTree = "<group>"; };
+		CB294FA221AA5EF000F715EB /* PasswordAutoFillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAutoFillViewController.swift; sourceTree = "<group>"; };
+		CB294FA421AA640100F715EB /* iOSBasics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSBasics.entitlements; sourceTree = "<group>"; };
+		CB294FA521AEC14300F715EB /* NetworkTask.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NetworkTask.md; sourceTree = "<group>"; };
+		CB294FA621B0C16800F715EB /* OAuth.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = OAuth.md; sourceTree = "<group>"; };
 		CB44B262219BA06F00A59600 /* iOSBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB44B265219BA06F00A59600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB44B267219BA06F00A59600 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +143,7 @@
 		CB44B264219BA06F00A59600 /* iOSBasics */ = {
 			isa = PBXGroup;
 			children = (
+				CB294FA421AA640100F715EB /* iOSBasics.entitlements */,
 				CB44B297219C155200A59600 /* Features */,
 				CB44B295219BA2EC00A59600 /* HowTo */,
 				CB44B265219BA06F00A59600 /* AppDelegate.swift */,
@@ -175,6 +183,10 @@
 				CB44B2A0219C1DB200A59600 /* Todo.md */,
 				CB4E7A49219F918B009BC94E /* CocoaLumberjack.md */,
 				CB4E7A4A21A0DE82009BC94E /* Architecture.md */,
+				CB294F6621A4D2D800F715EB /* Distribution.md */,
+				CB294F6721A4DF5300F715EB /* Signing.md */,
+				CB294FA521AEC14300F715EB /* NetworkTask.md */,
+				CB294FA621B0C16800F715EB /* OAuth.md */,
 			);
 			path = HowTo;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 				CB44B29D219C15F500A59600 /* WebViewViewController.swift */,
 				CB44B2A1219D10B600A59600 /* AutoLayoutViewController.swift */,
 				CB44B2A3219D5F3200A59600 /* NetworkViewController.swift */,
+				CB294FA221AA5EF000F715EB /* PasswordAutoFillViewController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -260,6 +273,11 @@
 				TargetAttributes = {
 					CB44B261219BA06F00A59600 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					CB44B277219BA07000A59600 = {
 						CreatedOnToolsVersion = 10.0;
@@ -375,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB294FA321AA5EF000F715EB /* PasswordAutoFillViewController.swift in Sources */,
 				CB44B26A219BA06F00A59600 /* DetailViewController.swift in Sources */,
 				CB44B2A4219D5F3200A59600 /* NetworkViewController.swift in Sources */,
 				CB44B268219BA06F00A59600 /* MasterViewController.swift in Sources */,
@@ -556,6 +575,7 @@
 			baseConfigurationReference = FFBEC2C043AF5E69716B378D /* Pods-iOSBasics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSBasics/iOSBasics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CBFTL636AR;
 				INFOPLIST_FILE = iOSBasics/Info.plist;
@@ -575,6 +595,7 @@
 			baseConfigurationReference = 3D31729876210C7D313DCCA3 /* Pods-iOSBasics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSBasics/iOSBasics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CBFTL636AR;
 				INFOPLIST_FILE = iOSBasics/Info.plist;

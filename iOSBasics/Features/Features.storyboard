@@ -63,5 +63,46 @@
             </objects>
             <point key="canvasLocation" x="220" y="762"/>
         </scene>
+        <!--Password Auto Fill View Controller-->
+        <scene sceneID="0Sa-AF-JLZ">
+            <objects>
+                <viewController storyboardIdentifier="AutoFill" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MVs-3m-gBA" customClass="PasswordAutoFillViewController" customModule="iOSBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OoI-jV-Fea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYI-GU-bPc">
+                                <rect key="frame" x="16" y="50" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSa-6U-jxe">
+                                <rect key="frame" x="16" y="88" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UYI-GU-bPc" firstAttribute="trailing" secondItem="SSa-6U-jxe" secondAttribute="trailing" id="DdR-tJ-WFG"/>
+                            <constraint firstItem="SSa-6U-jxe" firstAttribute="top" secondItem="UYI-GU-bPc" secondAttribute="bottom" constant="8" symbolic="YES" id="Fjf-Gv-5z3"/>
+                            <constraint firstItem="UYI-GU-bPc" firstAttribute="trailing" secondItem="OoI-jV-Fea" secondAttribute="trailingMargin" id="NY3-Al-Qx7"/>
+                            <constraint firstItem="auB-Ky-fba" firstAttribute="top" secondItem="UYI-GU-bPc" secondAttribute="top" constant="-30" id="VqY-Gh-fC7"/>
+                            <constraint firstItem="UYI-GU-bPc" firstAttribute="leading" secondItem="SSa-6U-jxe" secondAttribute="leading" id="feV-MN-5s5"/>
+                            <constraint firstItem="UYI-GU-bPc" firstAttribute="leading" secondItem="OoI-jV-Fea" secondAttribute="leadingMargin" id="lI3-De-fcg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="auB-Ky-fba"/>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="SSa-6U-jxe" id="BE3-Tx-Z3c"/>
+                        <outlet property="username" destination="UYI-GU-bPc" id="kEt-5H-qKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSr-RP-W4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="760.56971514242889"/>
+        </scene>
     </scenes>
 </document>

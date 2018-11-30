@@ -59,6 +59,11 @@ class DetailViewController: UIViewController {
                 if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewViewController {
                     self.navigationController?.pushViewController(vc, animated: false)
                 }
+        case .autofill :
+                print("go autofill ")
+                if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "AutoFill") as? PasswordAutoFillViewController {
+                    self.navigationController?.pushViewController(vc, animated: false)
+            }
             default:
                 print("")
         }
