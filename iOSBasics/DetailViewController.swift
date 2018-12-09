@@ -62,7 +62,10 @@ class DetailViewController: UIViewController {
         case .autofill :
                 print("go autofill ")
                 if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "AutoFill") as? PasswordAutoFillViewController {
-                    self.navigationController?.pushViewController(vc, animated: false)
+                    //self.navigationController?.pushViewController(vc, animated: false)
+                    self.present(vc, animated: false) {
+                        
+                    }
             }
             default:
                 print("")

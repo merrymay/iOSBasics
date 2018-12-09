@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,8 +72,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PM-LI-Una">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYI-GU-bPc">
                                 <rect key="frame" x="16" y="50" width="343" height="30"/>
+                                <viewLayoutGuide key="safeArea" id="blq-ad-Km6"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -86,11 +92,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0PM-LI-Una" firstAttribute="top" secondItem="auB-Ky-fba" secondAttribute="top" id="6co-Am-iFs"/>
                             <constraint firstItem="UYI-GU-bPc" firstAttribute="trailing" secondItem="SSa-6U-jxe" secondAttribute="trailing" id="DdR-tJ-WFG"/>
                             <constraint firstItem="SSa-6U-jxe" firstAttribute="top" secondItem="UYI-GU-bPc" secondAttribute="bottom" constant="8" symbolic="YES" id="Fjf-Gv-5z3"/>
                             <constraint firstItem="UYI-GU-bPc" firstAttribute="trailing" secondItem="OoI-jV-Fea" secondAttribute="trailingMargin" id="NY3-Al-Qx7"/>
+                            <constraint firstItem="0PM-LI-Una" firstAttribute="leading" secondItem="auB-Ky-fba" secondAttribute="leading" id="SuD-oX-lNO"/>
+                            <constraint firstItem="0PM-LI-Una" firstAttribute="bottom" secondItem="auB-Ky-fba" secondAttribute="bottom" id="UCy-PI-sVQ"/>
                             <constraint firstItem="auB-Ky-fba" firstAttribute="top" secondItem="UYI-GU-bPc" secondAttribute="top" constant="-30" id="VqY-Gh-fC7"/>
                             <constraint firstItem="UYI-GU-bPc" firstAttribute="leading" secondItem="SSa-6U-jxe" secondAttribute="leading" id="feV-MN-5s5"/>
+                            <constraint firstItem="0PM-LI-Una" firstAttribute="trailing" secondItem="auB-Ky-fba" secondAttribute="trailing" id="gCS-f1-2ms"/>
                             <constraint firstItem="UYI-GU-bPc" firstAttribute="leading" secondItem="OoI-jV-Fea" secondAttribute="leadingMargin" id="lI3-De-fcg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="auB-Ky-fba"/>
