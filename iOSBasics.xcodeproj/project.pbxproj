@@ -72,6 +72,7 @@
 		CB44B2A3219D5F3200A59600 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		CB4E7A49219F918B009BC94E /* CocoaLumberjack.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CocoaLumberjack.md; sourceTree = "<group>"; };
 		CB4E7A4A21A0DE82009BC94E /* Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Architecture.md; sourceTree = "<group>"; };
+		CB6D99E221BF3CBD007EABDD /* CocoaPodsForMultipleTarget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CocoaPodsForMultipleTarget.md; sourceTree = "<group>"; };
 		FFBEC2C043AF5E69716B378D /* Pods-iOSBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBasics/Pods-iOSBasics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +188,7 @@
 				CB294F6721A4DF5300F715EB /* Signing.md */,
 				CB294FA521AEC14300F715EB /* NetworkTask.md */,
 				CB294FA621B0C16800F715EB /* OAuth.md */,
+				CB6D99E221BF3CBD007EABDD /* CocoaPodsForMultipleTarget.md */,
 			);
 			path = HowTo;
 			sourceTree = "<group>";
