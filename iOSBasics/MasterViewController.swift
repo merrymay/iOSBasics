@@ -9,7 +9,7 @@
 import UIKit
 
 enum SampleDataTypes {
-    case autolayout, network, webview, autofill, restAPI, etc
+    case autolayout, network, webview, autofill, restAPI, banner, etc
 }
 struct SampleData {
     var sampleDataType : SampleDataTypes
@@ -27,7 +27,8 @@ class MasterViewController: UITableViewController {
         SampleData(sampleDataType: .autofill, title: "Username, password autofill"),
         
         SampleData(sampleDataType: .restAPI, title: "RestAPI"),
-        SampleData(sampleDataType: .webview, title: "apns"),
+        SampleData(sampleDataType: .banner, title: "Self-scrolling Banner"),
+        
         SampleData(sampleDataType: .webview, title: "firebase FCM"),
         SampleData(sampleDataType: .webview, title: "Async image load"), 
         SampleData(sampleDataType: .restAPI, title: "etc")]

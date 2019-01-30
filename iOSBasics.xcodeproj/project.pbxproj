@@ -21,6 +21,8 @@
 		CB44B29E219C15F500A59600 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B29D219C15F500A59600 /* WebViewViewController.swift */; };
 		CB44B2A2219D10B600A59600 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B2A1219D10B600A59600 /* AutoLayoutViewController.swift */; };
 		CB44B2A4219D5F3200A59600 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B2A3219D5F3200A59600 /* NetworkViewController.swift */; };
+		CB73038121CB249000D8CB18 /* LeftSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */; };
+		CBC8FE8E2201280500B646B3 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FE8D2201280500B646B3 /* BannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CB4E7A49219F918B009BC94E /* CocoaLumberjack.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CocoaLumberjack.md; sourceTree = "<group>"; };
 		CB4E7A4A21A0DE82009BC94E /* Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Architecture.md; sourceTree = "<group>"; };
 		CB6D99E221BF3CBD007EABDD /* CocoaPodsForMultipleTarget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CocoaPodsForMultipleTarget.md; sourceTree = "<group>"; };
+		CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSlideViewController.swift; sourceTree = "<group>"; };
+		CBC8FE8D2201280500B646B3 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		FFBEC2C043AF5E69716B378D /* Pods-iOSBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSBasics/Pods-iOSBasics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +205,8 @@
 				CB44B2A1219D10B600A59600 /* AutoLayoutViewController.swift */,
 				CB44B2A3219D5F3200A59600 /* NetworkViewController.swift */,
 				CB294FA221AA5EF000F715EB /* PasswordAutoFillViewController.swift */,
+				CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */,
+				CBC8FE8D2201280500B646B3 /* BannerViewController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -395,9 +401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC8FE8E2201280500B646B3 /* BannerViewController.swift in Sources */,
 				CB294FA321AA5EF000F715EB /* PasswordAutoFillViewController.swift in Sources */,
 				CB44B26A219BA06F00A59600 /* DetailViewController.swift in Sources */,
 				CB44B2A4219D5F3200A59600 /* NetworkViewController.swift in Sources */,
+				CB73038121CB249000D8CB18 /* LeftSlideViewController.swift in Sources */,
 				CB44B268219BA06F00A59600 /* MasterViewController.swift in Sources */,
 				CB44B29E219C15F500A59600 /* WebViewViewController.swift in Sources */,
 				CB44B266219BA06F00A59600 /* AppDelegate.swift in Sources */,

@@ -72,6 +72,28 @@ class NetworkViewController : UIViewController {
         
         performJSONDecodeUsingCodableStruct()
         performJSONDecodeUsingCodableStruct2()
+        
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeftSlideViewController") as? LeftSlideViewController {
+//                vc.modalPresentationStyle = .currentContext
+//                vc.modalTransitionStyle = .crossDissolve
+//                self.presentDetail(vc)
+//            }
+//
+//        }
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeftSlideViewController") as? LeftSlideViewController {
+
+            
+            
+            vc.modalPresentationStyle = .currentContext
+            vc.modalTransitionStyle = .crossDissolve
+            
+            self.present(vc, animated: false) {
+                
+            }
+        
+        }
     }
     
     // MARK: - http request
