@@ -72,9 +72,15 @@ class DetailViewController: UIViewController {
                 self.navigationController?.pushViewController(vc, animated: false)
             }
             
-            default:
-                print("")
-        }
+ 
+        case .dropdown :
+            if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "Dropdown") as? DropdownViewController {
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        
+        default: 
+        print("")
+    }
     }
 }
 
