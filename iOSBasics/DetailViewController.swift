@@ -57,7 +57,11 @@ class DetailViewController: UIViewController {
         case .webview :
                 print("go WebViewViewController")
                 if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewViewController {
-                    self.navigationController?.pushViewController(vc, animated: false)
+                    //self.navigationController?.pushViewController(vc, animated: false)
+                    
+                    self.present(vc, animated: false) {
+                        
+                    }
                 }
         case .autofill :
                 print("go autofill ")
@@ -77,8 +81,16 @@ class DetailViewController: UIViewController {
             if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "Dropdown") as? DropdownViewController {
                 self.navigationController?.pushViewController(vc, animated: false)
             }
-        
-        default: 
+        case .popover :
+            if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "PopOverMain") as? PopoverMainViewController {
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        case .leftMenu :
+            if let vc = UIStoryboard(name: "Features", bundle: nil).instantiateViewController(withIdentifier: "PopOverMain") as? PopoverMainViewController {
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        default:
+
         print("")
     }
     }

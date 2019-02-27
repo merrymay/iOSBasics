@@ -10,60 +10,50 @@ import Foundation
 import UIKit
 import QuartzCore
 
+/*
+ 
+ Show Left Menu
+ STEP 0 - Present viewcontroller as as modal with overcurrentcontext style!
+ STEP 1 - Set a view's hidden value to true in LeftMenuViewController's loadView
+ STEP 2 - Add left-move-in transition animation to a view in viewDidAppear
+ 
+ Close Left Menu
+ STEP 1 - Animate a view's frame by using UIView's animation
+ STEP 2 - Dismiss ViewController when the animation finished
+ 
+*/
 class LeftSlideViewController : UIViewController {
     
+    override func loadView() {
+        super.loadView()
+        
+        self.view.isHidden = true
+    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // defined in storyboard
-        // username.textContentType = .username
-        // password.textContentType = .password
+        self.view.isHidden = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let animation = CATransition()
-            animation.duration = 2.5
-            animation.type = CATransitionType.moveIn
-            animation.subtype = CATransitionSubtype.fromLeft
-            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-            self.view.layer.add(animation, forKey: "SwitchToView")
-        }
+        let transition = CATransition.init()
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction.init(name: .easeInEaseOut)
+        transition.type = .moveIn
+        transition.subtype = .fromLeft
+        
+        self.view.layer.add(transition, forKey: nil)
     }
     
     @IBAction func closeButtonAction(_ sender: Any) {
-        //self.dismissDetail()
-        
-        let animation = CATransition()
-        animation.duration = 2.5
-        animation.type = CATransitionType.moveIn
-        animation.subtype = CATransitionSubtype.fromRight
-        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        self.view.layer.add(animation, forKey: "SwitchToView")
-        
-        self .dismiss(animated: false) {
-            
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            self.view.frame = CGRect(x: self.view.frame.width * -1, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }) { (finished) in
+            self.view.isHidden = true
+            self.dismiss(animated: false, completion: nil)
         }
-    }
-}
-extension UIViewController {
-    
-    func presentDetail(_ viewControllerToPresent: UIViewController) {
-        let transition = CATransition()
-        transition.duration = 1.25
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromLeft
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        present(viewControllerToPresent, animated: false)
-    }
-    
-    func dismissDetail() {
-        let transition = CATransition()
-        transition.duration = 1.25
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromRight
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        dismiss(animated: false)
     }
 }

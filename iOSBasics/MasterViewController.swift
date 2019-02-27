@@ -9,7 +9,7 @@
 import UIKit
 
 enum SampleDataTypes {
-    case autolayout, network, webview, autofill, restAPI, banner, dropdown, etc
+    case autolayout, network, webview, autofill, restAPI, banner, dropdown, popover, leftMenu, etc
 }
 struct SampleData {
     var sampleDataType : SampleDataTypes
@@ -29,6 +29,8 @@ class MasterViewController: UITableViewController {
         SampleData(sampleDataType: .restAPI, title: "RestAPI"),
         SampleData(sampleDataType: .banner, title: "Self-scrolling Banner"),
         SampleData(sampleDataType: .dropdown, title: "Dropdown"),
+        SampleData(sampleDataType: .popover, title: "PopOver"),
+        SampleData(sampleDataType: .leftMenu, title: "Left Slide Menu"),
 
         SampleData(sampleDataType: .webview, title: "firebase FCM"),
         SampleData(sampleDataType: .webview, title: "Async image load"), 

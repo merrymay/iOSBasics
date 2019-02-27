@@ -6,4 +6,5 @@ target 'iOSBasics' do
     pod 'SnapKit', '~> 4.0.0'
     pod 'Alamofire', '~>4.7'
     pod 'CocoaLumberjack/Swift'
+    pod 'AMPopTip'
 end

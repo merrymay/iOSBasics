@@ -82,18 +82,18 @@ class NetworkViewController : UIViewController {
 //            }
 //
 //        }
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeftSlideViewController") as? LeftSlideViewController {
-
-            
-            
-            vc.modalPresentationStyle = .currentContext
-            vc.modalTransitionStyle = .crossDissolve
-            
-            self.present(vc, animated: false) {
-                
-            }
-        
-        }
+//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeftSlideViewController") as? LeftSlideViewController {
+//
+//
+//
+//            vc.modalPresentationStyle = .currentContext
+//            vc.modalTransitionStyle = .crossDissolve
+//
+//            self.present(vc, animated: false) {
+//
+//            }
+//
+//        }
     }
     
     // MARK: - http request

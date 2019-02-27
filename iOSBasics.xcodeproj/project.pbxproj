@@ -22,6 +22,8 @@
 		CB44B2A2219D10B600A59600 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B2A1219D10B600A59600 /* AutoLayoutViewController.swift */; };
 		CB44B2A4219D5F3200A59600 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44B2A3219D5F3200A59600 /* NetworkViewController.swift */; };
 		CB73038121CB249000D8CB18 /* LeftSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */; };
+		CBA9F7452210F4C800516F83 /* PopoverMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F7442210F4C800516F83 /* PopoverMainViewController.swift */; };
+		CBA9F7472210FA8F00516F83 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9F7462210FA8F00516F83 /* PopoverViewController.swift */; };
 		CBC8FE8E2201280500B646B3 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FE8D2201280500B646B3 /* BannerViewController.swift */; };
 		CBC8FE95220163B600B646B3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FE91220163B600B646B3 /* CustomTextField.swift */; };
 		CBC8FE96220163B600B646B3 /* HorizontalGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FE92220163B600B646B3 /* HorizontalGraph.swift */; };
@@ -81,6 +83,9 @@
 		CB4E7A4A21A0DE82009BC94E /* Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Architecture.md; sourceTree = "<group>"; };
 		CB6D99E221BF3CBD007EABDD /* CocoaPodsForMultipleTarget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CocoaPodsForMultipleTarget.md; sourceTree = "<group>"; };
 		CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSlideViewController.swift; sourceTree = "<group>"; };
+		CB98879F221B829A007CB5F8 /* StackViewToScroll.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = StackViewToScroll.md; sourceTree = "<group>"; };
+		CBA9F7442210F4C800516F83 /* PopoverMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverMainViewController.swift; sourceTree = "<group>"; };
+		CBA9F7462210FA8F00516F83 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		CBC8FE8D2201280500B646B3 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		CBC8FE91220163B600B646B3 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CBC8FE92220163B600B646B3 /* HorizontalGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalGraph.swift; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 				CB294FA521AEC14300F715EB /* NetworkTask.md */,
 				CB294FA621B0C16800F715EB /* OAuth.md */,
 				CB6D99E221BF3CBD007EABDD /* CocoaPodsForMultipleTarget.md */,
+				CB98879F221B829A007CB5F8 /* StackViewToScroll.md */,
 			);
 			path = HowTo;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 				CB73038021CB249000D8CB18 /* LeftSlideViewController.swift */,
 				CBC8FE8D2201280500B646B3 /* BannerViewController.swift */,
 				CBC8FE992201682D00B646B3 /* DropdownViewController.swift */,
+				CBA9F7442210F4C800516F83 /* PopoverMainViewController.swift */,
+				CBA9F7462210FA8F00516F83 /* PopoverViewController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -400,6 +408,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOSBasics/Pods-iOSBasics-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -408,6 +417,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -424,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA9F7472210FA8F00516F83 /* PopoverViewController.swift in Sources */,
 				CBC8FE95220163B600B646B3 /* CustomTextField.swift in Sources */,
 				CBC8FE98220163B600B646B3 /* CustomTextView.swift in Sources */,
 				CBC8FE8E2201280500B646B3 /* BannerViewController.swift in Sources */,
@@ -431,6 +442,7 @@
 				CB44B26A219BA06F00A59600 /* DetailViewController.swift in Sources */,
 				CBC8FE9A2201682D00B646B3 /* DropdownViewController.swift in Sources */,
 				CB44B2A4219D5F3200A59600 /* NetworkViewController.swift in Sources */,
+				CBA9F7452210F4C800516F83 /* PopoverMainViewController.swift in Sources */,
 				CBC8FE97220163B600B646B3 /* CustomSlider.swift in Sources */,
 				CBC8FE96220163B600B646B3 /* HorizontalGraph.swift in Sources */,
 				CB73038121CB249000D8CB18 /* LeftSlideViewController.swift in Sources */,

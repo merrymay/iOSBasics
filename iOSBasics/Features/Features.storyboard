@@ -121,6 +121,91 @@
             </objects>
             <point key="canvasLocation" x="220" y="762"/>
         </scene>
+        <!--Popover Main View Controller-->
+        <scene sceneID="Sfz-xX-NfX">
+            <objects>
+                <viewController storyboardIdentifier="PopOverMain" id="TW4-uw-Fg3" customClass="PopoverMainViewController" customModule="iOSBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8uO-Gy-5l1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0U-RX-Ubb">
+                                <rect key="frame" x="138" y="20" width="99" height="30"/>
+                                <state key="normal" title="Show Popover"/>
+                                <connections>
+                                    <action selector="showPopover:" destination="TW4-uw-Fg3" eventType="touchUpInside" id="i9P-76-wHQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kI-DX-KEI">
+                                <rect key="frame" x="257" y="617" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show PopOver"/>
+                                <connections>
+                                    <action selector="showPopover:" destination="TW4-uw-Fg3" eventType="touchUpInside" id="IkL-Ly-sDG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-EL-s4Y">
+                                <rect key="frame" x="132" y="318" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show AMPopTip"/>
+                                <connections>
+                                    <action selector="showAMPopTip:" destination="TW4-uw-Fg3" eventType="touchUpInside" id="VRu-xe-xyp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r86-eZ-foh">
+                                <rect key="frame" x="154" y="280" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Left Menu"/>
+                                <connections>
+                                    <action selector="leftMenuButtonAction:" destination="TW4-uw-Fg3" eventType="touchUpInside" id="cUa-dW-dEb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q0U-RX-Ubb" firstAttribute="centerY" secondItem="8uO-Gy-5l1" secondAttribute="centerY" constant="-298.5" id="Zw7-cQ-cPh"/>
+                            <constraint firstItem="q0U-RX-Ubb" firstAttribute="centerX" secondItem="8uO-Gy-5l1" secondAttribute="centerX" id="gCd-Vb-WF6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mWp-34-8jE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cid-L8-oUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="1425"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="Mfk-sG-utO">
+            <objects>
+                <viewController storyboardIdentifier="PopOver" id="PV2-Iy-0xz" customClass="PopoverViewController" customModule="iOSBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GkO-5k-PPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-hq-M1m">
+                                <rect key="frame" x="16" y="36" width="343" height="81.5"/>
+                                <string key="text">사용 중인 요금제의 기본제공 데이터 일부 용량을 데이터박스에 담아둘 수 있는 기능입니다.  
+(100MB 단위로 매월 최대 2,000MB까지 담기 가능)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sib-wk-4CV" firstAttribute="trailing" secondItem="xeX-hq-M1m" secondAttribute="trailing" constant="16" id="JX2-JQ-zSm"/>
+                            <constraint firstItem="xeX-hq-M1m" firstAttribute="leading" secondItem="Sib-wk-4CV" secondAttribute="leading" constant="16" id="gNq-Gl-yRe"/>
+                            <constraint firstItem="xeX-hq-M1m" firstAttribute="top" secondItem="Sib-wk-4CV" secondAttribute="top" constant="16" id="ko4-RL-cbP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sib-wk-4CV"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="xeX-hq-M1m" id="ReV-Xn-CRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fae-Aj-vlt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="1427"/>
+        </scene>
         <!--Password Auto Fill View Controller-->
         <scene sceneID="0Sa-AF-JLZ">
             <objects>

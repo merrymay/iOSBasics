@@ -50,7 +50,7 @@ class WebViewViewController : UIViewController, WKNavigationDelegate {
         
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         view = webView
-        
+        webView.backgroundColor = UIColor.clear
         
         // add button
         view.addSubview(button)
@@ -74,6 +74,7 @@ class WebViewViewController : UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
  
         let myURL = URL(string: "https://merrymay.github.io/may.github.io/index.html")
+        //let myURL = URL(string: "https://familybox-dev.kt.com/ktFamily-s2/v3/story/view/detail?os=ios&ve=4.0.0&si=00EDS3V6JYN&ak=&cn=&tv=")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
