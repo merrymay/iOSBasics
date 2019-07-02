@@ -40,6 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
+        
+        let configuration : URLSessionConfiguration =
+            URLSessionConfiguration.default
+//        configuration.TLSMinimumSupportedProtocol = kSSLProtocol3
+//        let mySession = NSURLSession(configuration: configuration, delegate: self,
+//                                     delegateQueue: operationQueue)
+        
+        configuration.tlsMinimumSupportedProtocol = .tlsProtocol12
+        configuration.tlsMaximumSupportedProtocol = .tlsProtocol13
+        DDLogDebug("tlsMaximumSupportedProtocol = \(configuration.tlsMaximumSupportedProtocol.rawValue)")
+        DDLogDebug("tlsMinimumSupportedProtocol = \(configuration.tlsMinimumSupportedProtocol.rawValue)")
+
         return true
     }
 

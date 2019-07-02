@@ -7,4 +7,5 @@ target 'iOSBasics' do
     pod 'Alamofire', '~>4.7'
     pod 'CocoaLumberjack/Swift'
     pod 'AMPopTip'
+    pod 'lottie-ios'
 end
