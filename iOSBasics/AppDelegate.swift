@@ -10,14 +10,12 @@ import UIKit
 import CocoaLumberjack
 
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
-    var str: String?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // *** Initialize logger using CocoaLumberjack ***
